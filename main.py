@@ -1,3 +1,6 @@
-BOT_TOKEN = open('BOT_TOKEN.txt').readline()
+from bot.botConnection import bot
 
-print(BOT_TOKEN)
+@bot.message_handler(commands=['start'])
+def start_message(message):
+  bot.send_message(message.chat.id,"Привет ✌️ ")
+bot.infinity_polling()
