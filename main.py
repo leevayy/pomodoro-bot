@@ -1,0 +1,1 @@
+BOT_TOKEN = open('BOT_TOKEN.txt')
