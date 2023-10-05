@@ -1,6 +1,5 @@
 import time
 
-def set_timer(func,timer):
+def set_timeout(func,timer):
     time.sleep(timer)
     func()
-    
