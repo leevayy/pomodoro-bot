@@ -1,5 +1,6 @@
 import time
 
-def tfunc(func,timer):
+def set_timer(func,timer):
     time.sleep(timer)
     func()
+    
