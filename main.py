@@ -7,6 +7,12 @@ def start_polling():
     
     bot.infinity_polling()
 
+def send_work_message(chat_id: str):
+    bot.send_message(chat_id, f'Время для работы! ⏰')
+    
+def send_chill_message(chat_id: str):
+    bot.send_message(chat_id, f'Время отдыхать! 🌊')
+
 if __name__ == "__main__":
     start_polling()
 
