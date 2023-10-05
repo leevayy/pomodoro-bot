@@ -4,10 +4,11 @@ from telebot import types
 def commands(message, bot):
     text = message.text.split()[0][1:]
     arg = 0
-    try:
-        arg = int(message.text.split()[1])
-    except IndexError:
-        text = 'incorrect time'
+    if text in ['work', 'rest']:
+        try:
+            arg = int(message.text.split()[1])
+        except IndexError:
+            text = 'incorrect time'
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     ans = 'incorrect input'
     match text:
