@@ -1,5 +1,10 @@
 from telebot import types
 
+def send_work_reminder(chat_id: str, bot):
+    bot.send_message(chat_id, f'Время для работы! ⏰')
+    
+def send_chill_reminder(chat_id: str, bot):
+    bot.send_message(chat_id, f'Время отдыхать! 🌊')
 
 def commands(message, bot):
     text = message.text.split()[0][1:]
