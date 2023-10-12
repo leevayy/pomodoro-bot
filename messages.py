@@ -63,7 +63,7 @@ def reply(message, bot):
             btn1 = types.KeyboardButton('Стоп')
             markup.add(btn1)
             ans = 'Таймер запущен'
-
+            
         case 'Назад' | 'Стоп':
             btn1 = types.KeyboardButton('Старт таймера')
             btn2 = types.KeyboardButton('Настройки таймера')
@@ -71,3 +71,4 @@ def reply(message, bot):
             ans = f'Работа таймера приостановлена'
 
     bot.send_message(message.chat.id, text=ans, reply_markup=markup)
+    
